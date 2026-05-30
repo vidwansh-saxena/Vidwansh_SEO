@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidwansh Saxena | SEO Specialist — Link Building, On-Page & Local SEO</title>
+<meta name="description" content="Vidwansh Saxena — SEO Specialist with 4+ years experience. Helping businesses in India, US & UK rank on Page 1 of Google. Free SEO Audit available.">
+<meta property="og:title" content="Vidwansh Saxena | SEO Specialist">
+<meta property="og:description" content="4+ Years SEO Experience | Link Building | On-Page SEO | Local SEO | Serving India, US & UK">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060912;
+  --bg2:#0c1220;
+  --bg3:#111827;
+  --accent:#3b82f6;
+  --accent2:#60a5fa;
+  --gold:#f59e0b;
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+  --border:rgba(59,130,246,0.15);
+  --glass:rgba(255,255,255,0.03);
+  --r:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+
+/* CUSTOM CURSOR */
+#cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,background 0.2s;mix-blend-mode:screen}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(59,130,246,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.12s ease}
+body:hover #cursor{opacity:1}
+
+/* SCROLL PROGRESS */
+#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));z-index:9997;transition:width 0.1s}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:20px 0;transition:all 0.4s}
+nav.scrolled{background:rgba(6,9,18,0.92);backdrop-filter:blur(20px);padding:14px 0;border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s;letter-spacing:0.3px}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff;padding:8px 20px;border-radius:6px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--accent2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);transition:all 0.3s;display:block}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+#particles-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.hero-glow{position:absolute;top:20%;left:30%;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.08) 0%,transparent 70%);pointer-events:none;z-index:1}
+.hero-glow2{position:absolute;bottom:10%;right:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,0.05) 0%,transparent 70%);pointer-events:none;z-index:1}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);padding:6px 14px;border-radius:100px;font-size:0.8rem;color:var(--accent2);margin-bottom:24px;font-weight:500}
+.hero-badge::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin-bottom:20px}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .blue{color:var(--accent)}
+.hero-sub{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:36px;max-width:480px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.btn-primary{background:var(--accent);color:#fff;padding:13px 28px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.92rem;transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;border:none;cursor:none}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,0.35)}
+.btn-secondary{background:transparent;color:var(--text);padding:13px 28px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.92rem;transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.15);cursor:none}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:32px}
+.hstat{display:flex;flex-direction:column}
+.hstat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--text);line-height:1}
+.hstat-num span{color:var(--accent);font-size:1.3rem}
+.hstat-lbl{font-size:0.75rem;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-card-main{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:28px;width:100%;max-width:400px;position:relative;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-card-main::before{content:'';position:absolute;inset:-1px;border-radius:20px;background:linear-gradient(135deg,rgba(59,130,246,0.3),transparent,rgba(245,158,11,0.1));z-index:-1}
+.rank-chart{margin-bottom:20px}
+.rank-label{font-size:0.75rem;color:var(--muted);margin-bottom:10px;font-weight:500}
+.rank-bars{display:flex;flex-direction:column;gap:8px}
+.rbar{display:flex;align-items:center;gap:10px;font-size:0.78rem}
+.rbar-label{color:var(--muted);width:90px;flex-shrink:0}
+.rbar-track{flex:1;height:5px;background:rgba(255,255,255,0.07);border-radius:10px;overflow:hidden}
+.rbar-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));animation:barFill 2s ease forwards}
+@keyframes barFill{from{width:0}}
+.rbar-pct{color:var(--accent2);font-size:0.72rem;width:30px;text-align:right}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.ktag{background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);padding:4px 10px;border-radius:100px;font-size:0.72rem;color:var(--accent2)}
+.float-badge{position:absolute;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:0.78rem;backdrop-filter:blur(10px)}
+.float-badge.top-right{top:-20px;right:-20px;color:#22c55e;animation:float 4s ease-in-out infinite 1s}
+.float-badge.bot-left{bottom:-20px;left:-20px;color:var(--gold);animation:float 5s ease-in-out infinite 0.5s}
+
+/* SECTION COMMON */
+section{padding:100px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:16px}
+.section-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:500px}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
+.text-center .section-label{justify-content:center}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-box{background:var(--bg2);border:1px solid var(--border);border-radius:20px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;overflow:hidden}
+.about-img-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,130,246,0.05),transparent)}
+.about-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.astat{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s}
+.astat:hover{border-color:var(--accent);transform:translateY(-3px)}
+.astat-num{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent)}
+.astat-lbl{font-size:0.75rem;color:var(--muted);margin-top:4px}
+.about-text .feature-list{margin-top:30px;display:flex;flex-direction:column;gap:14px}
+.feature-item{display:flex;gap:12px;align-items:flex-start}
+.feat-icon{width:36px;height:36px;background:rgba(59,130,246,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.feat-text h4{font-size:0.95rem;font-weight:600;margin-bottom:3px}
+.feat-text p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+
+/* SERVICES */
+.services{background:var(--bg2)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:60px}
+.scard{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.35s;position:relative;overflow:hidden;cursor:none}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
+.scard:hover{border-color:rgba(59,130,246,0.4);transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.scard:hover::before{opacity:1}
+.scard-icon{width:48px;height:48px;background:rgba(59,130,246,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px;transition:all 0.3s}
+.scard:hover .scard-icon{background:rgba(59,130,246,0.2);transform:scale(1.1)}
+.scard h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.scard p{font-size:0.87rem;color:var(--muted);line-height:1.7}
+.scard-tag{display:inline-block;margin-top:16px;font-size:0.72rem;color:var(--accent2);background:rgba(59,130,246,0.08);padding:3px 10px;border-radius:100px;border:1px solid rgba(59,130,246,0.15)}
+
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;margin-top:60px;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:80px;right:80px;height:1px;background:linear-gradient(90deg,transparent,var(--border),var(--border),transparent)}
+.pstep{text-align:center;padding:0 20px;position:relative}
+.pstep-num{width:56px;height:56px;background:var(--bg2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--accent);position:relative;z-index:1;transition:all 0.3s}
+.pstep:hover .pstep-num{background:var(--accent);color:#fff;border-color:var(--accent);transform:scale(1.1)}
+.pstep h4{font-size:0.9rem;font-weight:600;margin-bottom:6px}
+.pstep p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+
+/* SKILLS */
+.skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px;align-items:start}
+.skill-bar-item{margin-bottom:18px}
+.skill-bar-top{display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.85rem;font-weight:500}
+.skill-pct{color:var(--accent2)}
+.skill-track{height:5px;background:rgba(255,255,255,0.07);border-radius:10px;overflow:hidden}
+.skill-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width 1.2s cubic-bezier(0.4,0,0.2,1)}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tool-badge{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;font-size:0.82rem;font-weight:500;transition:all 0.3s}
+.tool-badge:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
+.tool-icon{font-size:1.3rem;margin-bottom:6px;display:block}
+
+/* RESULTS */
+.results{background:var(--bg2)}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:60px}
+.result-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:28px;position:relative;overflow:hidden;transition:all 0.3s}
+.result-card:hover{transform:translateY(-5px);border-color:rgba(59,130,246,0.3)}
+.result-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));transform:scaleX(0);transition:transform 0.4s;transform-origin:left}
+.result-card:hover::after{transform:scaleX(1)}
+.rc-industry{font-size:0.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:600;margin-bottom:12px}
+.rc-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:16px}
+.rc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.rc-metric{text-align:center;background:rgba(59,130,246,0.05);border-radius:8px;padding:12px}
+.rc-metric-val{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent)}
+.rc-metric-lbl{font-size:0.72rem;color:var(--muted);margin-top:2px}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--bg)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:60px}
+.tcard{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.3s}
+.tcard:hover{transform:translateY(-4px);border-color:rgba(59,130,246,0.3)}
+.tcard-stars{color:var(--gold);font-size:0.9rem;margin-bottom:16px;letter-spacing:2px}
+.tcard-text{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:20px;font-style:italic}
+.tcard-author{display:flex;gap:12px;align-items:center}
+.tcard-avatar{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
+.tcard-name{font-weight:600;font-size:0.9rem}
+.tcard-role{font-size:0.78rem;color:var(--muted)}
+
+/* FAQ */
+.faq{background:var(--bg2)}
+.faq-list{max-width:780px;margin:60px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--bg3);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
+.faq-item.open{border-color:rgba(59,130,246,0.3)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:none;font-weight:500;font-size:0.95rem}
+.faq-q .icon{width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.1);display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;transition:all 0.3s;color:var(--accent)}
+.faq-item.open .icon{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s}
+.faq-a p{padding:0 24px 20px;color:var(--muted);font-size:0.88rem;line-height:1.8}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;margin-top:60px}
+.contact-info h3{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:16px}
+.contact-info p{color:var(--muted);font-size:0.92rem;line-height:1.8;margin-bottom:32px}
+.contact-links{display:flex;flex-direction:column;gap:14px}
+.clink{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--text);transition:all 0.2s;padding:14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem}
+.clink:hover{border-color:var(--accent);color:var(--accent);transform:translateX(4px)}
+.clink-icon{width:36px;height:36px;background:rgba(59,130,246,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.contact-form{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:36px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:0.82rem;font-weight:500;margin-bottom:8px;color:var(--muted)}
+.fg input,.fg textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.fg input:focus,.fg textarea:focus{border-color:var(--accent)}
+.fg textarea{resize:vertical;min-height:100px}
+.btn-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:none;transition:all 0.25s;letter-spacing:0.3px}
+.btn-submit:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,0.4)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 0 30px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand p{color:var(--muted);font-size:0.88rem;line-height:1.8;margin-top:12px;max-width:280px}
+.footer-col h5{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{color:var(--muted);text-decoration:none;font-size:0.86rem;transition:color 0.2s}
+.footer-col ul a:hover{color:var(--text)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap}
+.footer-bottom p{color:var(--muted);font-size:0.82rem}
+.social-links{display:flex;gap:12px}
+.soc-btn{width:36px;height:36px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1rem;transition:all 0.2s}
+.soc-btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:30px;right:30px;z-index:500;background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);animation:waPop 3s ease-in-out infinite;transition:transform 0.2s}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes waPop{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.7)}}
+.wa-tooltip{position:absolute;right:64px;background:var(--bg2);color:var(--text);padding:6px 12px;border-radius:6px;font-size:0.78rem;white-space:nowrap;opacity:0;transition:opacity 0.2s;border:1px solid var(--border)}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* BACK TO TOP */
+#back-top{position:fixed;bottom:30px;left:30px;background:var(--bg2);border:1px solid var(--border);color:var(--text);width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:none;opacity:0;transform:translateY(10px);transition:all 0.3s;z-index:500;font-size:1.1rem;text-decoration:none}
+#back-top.show{opacity:1;transform:translateY(0)}
+#back-top:hover{background:var(--accent);border-color:var(--accent)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* MOBILE NAV */
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(6,9,18,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:30px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none;transition:color 0.2s}
+.mobile-menu a:hover{color:var(--accent)}
+.close-menu{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:none}
+
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .contact-wrap{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .skills-wrap{grid-template-columns:1fr}
+  .process-steps::before{display:none}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  section{padding:70px 0}
+  .form-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">Vidwansh<span>.SEO</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Free SEO Audit</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="close-menu" id="close-menu">✕</button>
+  <a href="#home" onclick="closeMobileMenu()">Home</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#results" onclick="closeMobileMenu()">Results</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">🟢 Available for new projects</div>
+      <h1>
+        <span class="line">Rank Higher.</span>
+        <span class="line blue">Get More</span>
+        <span class="line">Customers.</span>
+      </h1>
+      <p class="hero-sub">Strategic SEO Specialist helping businesses in <strong>India, US & UK</strong> dominate Google search rankings through Link Building, On-Page & Local SEO — without paid ads.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">🚀 Get Free SEO Audit</a>
+        <a href="#results" class="btn-secondary">View Results →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num">4<span>+</span></span><span class="hstat-lbl">Years Experience</span></div>
+        <div class="hstat"><span class="hstat-num">90<span>%</span></span><span class="hstat-lbl">Keywords Ranked</span></div>
+        <div class="hstat"><span class="hstat-num">3</span><span class="hstat-lbl">Expert Team</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <div class="rank-chart">
+          <div class="rank-label">🎯 Keyword Rankings Improved</div>
+          <div class="rank-bars">
+            <div class="rbar"><span class="rbar-label">Local SEO</span><div class="rbar-track"><div class="rbar-fill" style="width:92%"></div></div><span class="rbar-pct">92%</span></div>
+            <div class="rbar"><span class="rbar-label">Link Building</span><div class="rbar-track"><div class="rbar-fill" style="width:88%;animation-delay:0.2s"></div></div><span class="rbar-pct">88%</span></div>
+            <div class="rbar"><span class="rbar-label">On-Page SEO</span><div class="rbar-track"><div class="rbar-fill" style="width:95%;animation-delay:0.4s"></div></div><span class="rbar-pct">95%</span></div>
+            <div class="rbar"><span class="rbar-label">Technical SEO</span><div class="rbar-track"><div class="rbar-fill" style="width:85%;animation-delay:0.6s"></div></div><span class="rbar-pct">85%</span></div>
+          </div>
+        </div>
+        <div class="keyword-tags">
+          <span class="ktag">🇮🇳 India</span>
+          <span class="ktag">🇺🇸 US Market</span>
+          <span class="ktag">🇬🇧 UK Market</span>
+          <span class="ktag">Page 1 Rankings</span>
+          <span class="ktag">No Paid Ads</span>
+        </div>
+      </div>
+      <div class="float-badge top-right">✅ 70-90% Keywords Ranked</div>
+      <div class="float-badge bot-left">⚡ 4+ Years Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal-left">
+        <div class="about-img-box">👨‍💻</div>
+        <div class="about-stat-cards">
+          <div class="astat"><div class="astat-num counter" data-target="4">0</div><div class="astat-lbl">Years Experience</div></div>
+          <div class="astat"><div class="astat-num">70-90%</div><div class="astat-lbl">Keywords Ranked</div></div>
+          <div class="astat"><div class="astat-num counter" data-target="3">0</div><div class="astat-lbl">Expert Team</div></div>
+          <div class="astat"><div class="astat-num">3x</div><div class="astat-lbl">Markets Served</div></div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Hi, I'm Vidwansh Saxena</h2>
+        <p style="color:var(--muted);line-height:1.9;font-size:0.95rem">I'm an SEO Specialist based in Bareilly, India, working with businesses across <strong style="color:var(--text)">India, US & UK</strong>. Over the past 4+ years, I've helped clients move from "Not Ranked" to the Top 10 of Google with measurable, lasting results.</p>
+        <p style="color:var(--muted);line-height:1.9;font-size:0.95rem;margin-top:14px">I lead a dedicated 3-person SEO team delivering full-service solutions — from technical audits to link acquisition — with complete transparency and weekly reporting.</p>
+        <div class="feature-list">
+          <div class="feature-item"><div class="feat-icon">🎯</div><div class="feat-text"><h4>Results-First Approach</h4><p>Every strategy is built around measurable outcomes — rankings, traffic, and leads.</p></div></div>
+          <div class="feature-item"><div class="feat-icon">👥</div><div class="feat-text"><h4>3-Person Expert Team</h4><p>You get a full SEO pod: link building, on-page & technical — at freelancer rates.</p></div></div>
+          <div class="feature-item"><div class="feat-icon">📊</div><div class="feat-text"><h4>100% Transparent Reporting</h4><p>Weekly reports with real data so you always know exactly what's happening.</p></div></div>
+        </div>
+        <a href="https://linkedin.com/in/vidwansh-saxena-14b489215" target="_blank" class="btn-primary" style="margin-top:28px;display:inline-flex">View LinkedIn Profile →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">What I Offer</span>
+      <h2 class="section-title">Premium SEO Services</h2>
+      <p class="section-sub">Everything you need to outperform competitors and claim the top spot on Google.</p>
+    </div>
+    <div class="services-grid">
+      <div class="scard reveal"><div class="scard-icon">🔗</div><h3>Link Building</h3><p>High-authority backlink acquisition through ethical outreach. Quality over quantity to build your domain authority safely and sustainably.</p><span class="scard-tag">Off-Page SEO</span></div>
+      <div class="scard reveal"><div class="scard-icon">📄</div><h3>On-Page SEO</h3><p>Deep keyword research, meta optimization, content strategy & internal linking — making sure Google understands exactly what you offer.</p><span class="scard-tag">On-Page</span></div>
+      <div class="scard reveal"><div class="scard-icon">📍</div><h3>Local SEO</h3><p>Dominate the Map Pack. Google Business Profile optimization, local citations & review management to bring in nearby customers.</p><span class="scard-tag">Local Search</span></div>
+      <div class="scard reveal"><div class="scard-icon">⚙️</div><h3>Technical SEO</h3><p>Site speed, Core Web Vitals, crawlability fixes, schema markup and indexation issues resolved for peak performance.</p><span class="scard-tag">Technical</span></div>
+      <div class="scard reveal"><div class="scard-icon">🔍</div><h3>Keyword Research</h3><p>Competitor gap analysis, search intent mapping, and keyword clustering to target terms that actually convert.</p><span class="scard-tag">Strategy</span></div>
+      <div class="scard reveal"><div class="scard-icon">📋</div><h3>SEO Audit</h3><p>Full-site technical & content audit delivering a prioritised action plan to fix what's holding your site back from ranking.</p><span class="scard-tag">Free Available</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">My SEO Process</h2>
+      <p class="section-sub">A clear, proven 6-step system that delivers consistent results.</p>
+    </div>
+    <div class="process-steps">
+      <div class="pstep reveal"><div class="pstep-num">01</div><h4>Website Audit</h4><p>Identify technical issues, content gaps & ranking opportunities</p></div>
+      <div class="pstep reveal"><div class="pstep-num">02</div><h4>Keyword Research</h4><p>Map high-intent, achievable keywords to each page</p></div>
+      <div class="pstep reveal"><div class="pstep-num">03</div><h4>SEO Strategy</h4><p>Build a custom roadmap aligned with your business goals</p></div>
+      <div class="pstep reveal"><div class="pstep-num">04</div><h4>Optimization</h4><p>Execute on-page, technical & link building simultaneously</p></div>
+      <div class="pstep reveal"><div class="pstep-num">05</div><h4>Monitoring</h4><p>Track rankings, traffic & report weekly with real data</p></div>
+      <div class="pstep reveal"><div class="pstep-num">06</div><h4>Growth</h4><p>Scale what works, iterate and expand for compounding results</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--bg2)">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Skills & Tools</h2>
+      <p class="section-sub">Built through 4+ years of real client work across multiple industries and markets.</p>
+    </div>
+    <div class="skills-wrap">
+      <div class="skill-bars reveal">
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>Technical SEO</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>On-Page SEO</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>Link Building</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>Local SEO</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>Keyword Research</span><span class="skill-pct">94%</span></div><div class="skill-track"><div class="skill-fill" data-width="94"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-top"><span>SEO Audits</span><span class="skill-pct">91%</span></div><div class="skill-track"><div class="skill-fill" data-width="91"></div></div></div>
+      </div>
+      <div class="reveal">
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;font-weight:600">Tools & Platforms</p>
+        <div class="tools-grid">
+          <div class="tool-badge"><span class="tool-icon">🔍</span>Ahrefs</div>
+          <div class="tool-badge"><span class="tool-icon">📊</span>SEMrush</div>
+          <div class="tool-badge"><span class="tool-icon">📈</span>GSC</div>
+          <div class="tool-badge"><span class="tool-icon">📉</span>GA4</div>
+          <div class="tool-badge"><span class="tool-icon">🐸</span>Screaming Frog</div>
+          <div class="tool-badge"><span class="tool-icon">🔎</span>Moz</div>
+          <div class="tool-badge"><span class="tool-icon">🌐</span>WordPress</div>
+          <div class="tool-badge"><span class="tool-icon">🛒</span>Shopify</div>
+          <div class="tool-badge"><span class="tool-icon">🗺️</span>Google Maps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="results">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Case Studies</span>
+      <h2 class="section-title">Real Results</h2>
+      <p class="section-sub">Proven outcomes delivered for businesses across India, US & UK.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="rc-industry">🇮🇳 India — Aerospace</div>
+        <div class="rc-title">AeroYantra — Technical SEO & Authority Building</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7">Led end-to-end SEO strategy for an aerospace engineering company, focusing on high-intent organic traffic in a specialized technical market.</p>
+        <div class="rc-metrics">
+          <div class="rc-metric"><div class="rc-metric-val">3x</div><div class="rc-metric-lbl">Traffic Growth</div></div>
+          <div class="rc-metric"><div class="rc-metric-val">Top 5</div><div class="rc-metric-lbl">Industry Keywords</div></div>
+        </div>
+      </div>
+      <div class="result-card reveal">
+        <div class="rc-industry">🇺🇸 US — Local Service</div>
+        <div class="rc-title">Local Business — Map Pack & Local SEO</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7">Complete local SEO overhaul: GBP optimization, local citations, review management — resulting in top 3 Map Pack placement.</p>
+        <div class="rc-metrics">
+          <div class="rc-metric"><div class="rc-metric-val">#1-3</div><div class="rc-metric-lbl">Map Pack</div></div>
+          <div class="rc-metric"><div class="rc-metric-val">+85%</div><div class="rc-metric-lbl">Local Calls</div></div>
+        </div>
+      </div>
+      <div class="result-card reveal">
+        <div class="rc-industry">🌍 Freelance — Multiple Industries</div>
+        <div class="rc-title">4+ Years — 70-90% Keywords to Top 100</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7">Consistent track record across multiple clients: moving unranked keywords into Top 100 through data-driven link building and on-page optimization.</p>
+        <div class="rc-metrics">
+          <div class="rc-metric"><div class="rc-metric-val">90%</div><div class="rc-metric-lbl">Keywords Ranked</div></div>
+          <div class="rc-metric"><div class="rc-metric-val">0→P1</div><div class="rc-metric-lbl">Avg Journey</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">What Clients Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard reveal">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Vidwansh and his team moved our key product pages from page 5 to page 1 in under 90 days. The weekly reports were clear and the results speak for themselves."</p>
+        <div class="tcard-author"><div class="tcard-avatar">RS</div><div><div class="tcard-name">Rahul S.</div><div class="tcard-role">E-commerce Owner, India</div></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Our Google Business Profile was invisible before. Now we're in the top 3 Map Pack for 6 different local search terms. Incredible work."</p>
+        <div class="tcard-author"><div class="tcard-avatar">MJ</div><div><div class="tcard-name">Mark J.</div><div class="tcard-role">Plumbing Business, California</div></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Best investment we made this year. Organic traffic tripled in 4 months and we're getting quality leads without spending on ads."</p>
+        <div class="tcard-author"><div class="tcard-avatar">SA</div><div><div class="tcard-name">Sarah A.</div><div class="tcard-role">Dental Clinic, London</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">How long does SEO take to show results?<span class="icon">+</span></div><div class="faq-a"><p>SEO is a long-term investment. You typically start seeing meaningful movement in 3-6 months for competitive keywords, with significant results at 6-12 months. Local SEO and low-competition keywords can show results faster — often within 4-8 weeks.</p></div></div>
+      <div class="faq-item"><div class="faq-q">What SEO services do you offer?<span class="icon">+</span></div><div class="faq-a"><p>I offer a complete SEO suite: Link Building, On-Page SEO, Technical SEO, Local SEO (Google Business Profile), Keyword Research, Content Strategy, and full SEO Audits. My 3-person team handles everything under one roof.</p></div></div>
+      <div class="faq-item"><div class="faq-q">How much does SEO cost?<span class="icon">+</span></div><div class="faq-a"><p>Pricing depends on the scope of work, competition level, and your target market. I offer flexible packages for small businesses, startups and established companies. Contact me for a custom quote after your free audit.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Do you offer a free SEO audit?<span class="icon">+</span></div><div class="faq-a"><p>Yes! I offer a complimentary SEO audit where I'll analyse your website, identify key issues, and outline quick wins. No cost, no obligation — just fill out the contact form below.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Do you work with US and UK clients?<span class="icon">+</span></div><div class="faq-a"><p>Absolutely. I work with clients across India, the US, and UK fully remotely. I'm comfortable with different time zones and deliver transparent weekly reports so you're always in the loop regardless of your location.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Start Your SEO Growth</h2>
+      <p class="section-sub">Fill out the form for a free SEO audit. I'll analyse your site and share exactly how to improve your rankings.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="reveal-left">
+        <h3 class="contact-info" style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:16px">Let's Talk SEO</h3>
+        <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;margin-bottom:28px">Ready to rank higher and get more customers? Reach out via any channel — I'll respond within 24 hours.</p>
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/vidwansh-saxena-14b489215" target="_blank" class="clink"><span class="clink-icon">💼</span><div><div style="font-weight:600">LinkedIn</div><div style="font-size:0.78rem;color:var(--muted)">linkedin.com/in/vidwansh-saxena-14b489215</div></div></a>
+          <a href="https://wa.me/917037136091" target="_blank" class="clink"><span class="clink-icon">💬</span><div><div style="font-weight:600">WhatsApp</div><div style="font-size:0.78rem;color:var(--muted)">+91 7037136091 — Quick replies</div></div></a>
+          <a href="mailto:vidwansh@email.com" class="clink"><span class="clink-icon">📧</span><div><div style="font-weight:600">Email</div><div style="font-size:0.78rem;color:var(--muted)">Available for projects & inquiries</div></div></a>
+          <div class="clink" style="cursor:default"><span class="clink-icon">📍</span><div><div style="font-weight:600">Location</div><div style="font-size:0.78rem;color:var(--muted)">Bareilly, India — Serving Globally</div></div></div>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="fg"><label>Your Name</label><input type="text" placeholder="John Smith" required></div>
+            <div class="fg"><label>Email Address</label><input type="email" placeholder="john@company.com" required></div>
+          </div>
+          <div class="fg"><label>Website URL</label><input type="url" placeholder="https://yourwebsite.com"></div>
+          <div class="fg"><label>How can I help?</label><textarea placeholder="Tell me about your SEO goals, current challenges, or what you'd like to improve..." required></textarea></div>
+          <button type="submit" class="btn-submit">🚀 Claim My Free SEO Audit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo" style="font-size:1.3rem">Vidwansh<span>.SEO</span></a>
+        <p>SEO Specialist helping businesses in India, US & UK rank on Page 1 of Google through Link Building, On-Page & Local SEO — without paid ads.</p>
+        <div class="social-links" style="margin-top:20px">
+          <a href="https://linkedin.com/in/vidwansh-saxena-14b489215" target="_blank" class="soc-btn">💼</a>
+          <a href="https://wa.me/917037136091" target="_blank" class="soc-btn">💬</a>
+          <a href="#contact" class="soc-btn">📧</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Link Building</a></li>
+          <li><a href="#services">On-Page SEO</a></li>
+          <li><a href="#services">Local SEO</a></li>
+          <li><a href="#services">Technical SEO</a></li>
+          <li><a href="#services">SEO Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#results">Case Studies</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Free Audit</a></li>
+          <li><a href="https://linkedin.com/in/vidwansh-saxena-14b489215" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Vidwansh Saxena — SEO Specialist. All rights reserved.</p>
+      <p style="color:var(--muted);font-size:0.78rem">Serving India · US · UK</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/917037136091?text=Hi%20Vidwansh%2C%20I%20need%20SEO%20help%20for%20my%20business!" target="_blank" class="wa-float">
+  <span class="wa-tooltip">Chat on WhatsApp</span>💬
+</a>
+
+<!-- BACK TO TOP -->
+<a href="#home" id="back-top">↑</a>
+
+<script>
+// CURSOR
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cursor.style.left=mx+'px';cursor.style.top=my+'px';
+});
+function animRing(){
+  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}animRing();
+document.querySelectorAll('a,button,.scard,.faq-q,.tool-badge').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.4)';});
+  el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';});
+});
+
+// SCROLL PROGRESS
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement;
+  const pct=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100;
+  document.getElementById('progress').style.width=pct+'%';
+});
+
+// NAV SCROLL
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('back-top').classList.toggle('show',window.scrollY>400);
+});
+
+// PARTICLES
+const canvas=document.getElementById('particles-canvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+class Particle{
+  constructor(){this.reset();}
+  reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.r=Math.random()*1.5+0.3;this.vx=(Math.random()-0.5)*0.3;this.vy=(Math.random()-0.5)*0.3;this.a=Math.random()*0.4+0.1;}
+  update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>canvas.width||this.y<0||this.y>canvas.height)this.reset();}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(59,130,246,${this.a})`;ctx.fill();}
+}
+for(let i=0;i<90;i++)particles.push(new Particle());
+function animP(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{p.update();p.draw();});
+  particles.forEach((a,i)=>{particles.slice(i+1).forEach(b=>{const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<100){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(59,130,246,${0.06*(1-d/100)})`;ctx.lineWidth=0.5;ctx.stroke();}});});
+  requestAnimationFrame(animP);
+}animP();
+
+// MOUSE PARALLAX HERO
+document.addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-0.5)*20;
+  const y=(e.clientY/window.innerHeight-0.5)*20;
+  document.querySelectorAll('.float-badge').forEach((el,i)=>{el.style.transform=`translate(${x*(i?-1:1)*0.5}px,${y*(i?-1:1)*0.5}px)`;});
+});
+
+// REVEAL
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});},{threshold:0.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+// COUNTERS
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){animCounter(e.target);cObs.unobserve(e.target);}});},{threshold:0.5});
+document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
+function animCounter(el){const target=+el.getAttribute('data-target');let c=0;const step=target/60;const t=setInterval(()=>{c+=step;if(c>=target){el.textContent=target+'+';clearInterval(t);}else{el.textContent=Math.floor(c);}},25);}
+
+// SKILL BARS
+const skillObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-fill').forEach(b=>{b.style.width=b.getAttribute('data-width')+'%';});skillObs.unobserve(e.target);}});},{threshold:0.3});
+document.querySelectorAll('.skill-bars').forEach(el=>skillObs.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0';});if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.maxHeight='200px';}});});
+
+// CONTACT FORM
+document.getElementById('contact-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const btn=this.querySelector('.btn-submit');
+  btn.textContent='Sending...';btn.disabled=true;
+  setTimeout(()=>{btn.textContent='✅ Sent! I\'ll reply within 24 hours';btn.style.background='#22c55e';this.reset();setTimeout(()=>{btn.textContent='🚀 Claim My Free SEO Audit';btn.style.background='';btn.disabled=false;},4000);},1500);
+});
+
+// MOBILE MENU
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('close-menu').addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('open'));
+function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open');}
+</script>
+</body>
+</html>
