@@ -8,7 +8,7 @@
 <meta property="og:title" content="Vidwansh Saxena | SEO Specialist">
 <meta property="og:description" content="4+ Years SEO Experience | Link Building | On-Page SEO | Local SEO | Serving India, US & UK">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#060912;
@@ -24,8 +24,8 @@
   --r:12px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;cursor:none;width:100%;min-height:100vh}
 
 /* CUSTOM CURSOR */
 #cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,background 0.2s;mix-blend-mode:screen}
@@ -39,7 +39,7 @@ body:hover #cursor{opacity:1}
 nav{position:fixed;top:0;width:100%;z-index:1000;padding:20px 0;transition:all 0.4s}
 nav.scrolled{background:rgba(6,9,18,0.92);backdrop-filter:blur(20px);padding:14px 0;border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
+.logo{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
 .logo span{color:var(--accent)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s;letter-spacing:0.3px}
@@ -50,18 +50,18 @@ nav.scrolled{background:rgba(6,9,18,0.92);backdrop-filter:blur(20px);padding:14p
 .hamburger span{width:22px;height:2px;background:var(--text);transition:all 0.3s;display:block}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:80px;width:100%}
 #particles-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
 .hero-glow{position:absolute;top:20%;left:30%;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.08) 0%,transparent 70%);pointer-events:none;z-index:1}
 .hero-glow2{position:absolute;bottom:10%;right:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,0.05) 0%,transparent 70%);pointer-events:none;z-index:1}
-.hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);padding:8px 18px;border-radius:100px;font-size:0.82rem;color:var(--accent2);margin-bottom:30px;font-weight:500;letter-spacing:0.3px}
+.hero-inner{width:100%;max-width:1100px;margin:0 auto;padding:0 4rem;position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);padding:9px 20px;border-radius:100px;font-size:0.85rem;color:var(--accent2);margin-bottom:32px;font-weight:500;letter-spacing:0.5px}
 .hero-badge::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(3.2rem,5.5vw,5.2rem);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:24px}
+.hero h1{font-family:'Outfit',sans-serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:800;line-height:1.04;letter-spacing:-1px;margin-bottom:28px}
 .hero h1 .line{display:block;overflow:hidden}
 .hero h1 .blue{color:var(--accent)}
-.hero-sub{color:var(--muted);font-size:1.05rem;line-height:1.85;margin-bottom:40px;max-width:540px;color:#94a3b8;font-weight:300}
+.hero-sub{font-size:1.1rem;line-height:1.9;margin-bottom:44px;max-width:500px;color:#94a3b8;font-weight:300;letter-spacing:0.1px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
 .btn-primary{background:var(--accent);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;border:none;cursor:none}
 .btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,0.35)}
@@ -69,7 +69,7 @@ nav.scrolled{background:rgba(6,9,18,0.92);backdrop-filter:blur(20px);padding:14p
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 .hero-stats{display:flex;gap:40px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.07);margin-top:8px}
 .hstat{display:flex;flex-direction:column}
-.hstat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--text);line-height:1}
+.hstat-num{font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:800;color:var(--text);line-height:1}
 .hstat-num span{color:var(--accent);font-size:1.3rem}
 .hstat-lbl{font-size:0.72rem;color:var(--muted);font-weight:500;margin-top:6px;text-transform:uppercase;letter-spacing:1px}
 .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
@@ -93,10 +93,10 @@ nav.scrolled{background:rgba(6,9,18,0.92);backdrop-filter:blur(20px);padding:14p
 
 /* SECTION COMMON */
 section{padding:100px 0}
-.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.container{max-width:1200px;margin:0 auto;padding:0 4rem;width:100%}
 .section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:16px}
 .section-label::before{content:'';width:20px;height:1px;background:var(--accent)}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
+.section-title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
 .section-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:500px}
 .text-center{text-align:center}
 .text-center .section-sub{margin:0 auto}
@@ -110,7 +110,7 @@ section{padding:100px 0}
 .about-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
 .astat{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s}
 .astat:hover{border-color:var(--accent);transform:translateY(-3px)}
-.astat-num{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent)}
+.astat-num{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent)}
 .astat-lbl{font-size:0.75rem;color:var(--muted);margin-top:4px}
 .about-text .feature-list{margin-top:30px;display:flex;flex-direction:column;gap:14px}
 .feature-item{display:flex;gap:12px;align-items:flex-start}
@@ -127,7 +127,7 @@ section{padding:100px 0}
 .scard:hover::before{opacity:1}
 .scard-icon{width:48px;height:48px;background:rgba(59,130,246,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px;transition:all 0.3s}
 .scard:hover .scard-icon{background:rgba(59,130,246,0.2);transform:scale(1.1)}
-.scard h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.scard h3{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:10px}
 .scard p{font-size:0.87rem;color:var(--muted);line-height:1.7}
 .scard-tag{display:inline-block;margin-top:16px;font-size:0.72rem;color:var(--accent2);background:rgba(59,130,246,0.08);padding:3px 10px;border-radius:100px;border:1px solid rgba(59,130,246,0.15)}
 
@@ -135,7 +135,7 @@ section{padding:100px 0}
 .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;margin-top:60px;position:relative}
 .process-steps::before{content:'';position:absolute;top:28px;left:80px;right:80px;height:1px;background:linear-gradient(90deg,transparent,var(--border),var(--border),transparent)}
 .pstep{text-align:center;padding:0 20px;position:relative}
-.pstep-num{width:56px;height:56px;background:var(--bg2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--accent);position:relative;z-index:1;transition:all 0.3s}
+.pstep-num{width:56px;height:56px;background:var(--bg2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:var(--accent);position:relative;z-index:1;transition:all 0.3s}
 .pstep:hover .pstep-num{background:var(--accent);color:#fff;border-color:var(--accent);transform:scale(1.1)}
 .pstep h4{font-size:0.9rem;font-weight:600;margin-bottom:6px}
 .pstep p{font-size:0.8rem;color:var(--muted);line-height:1.6}
@@ -160,10 +160,10 @@ section{padding:100px 0}
 .result-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));transform:scaleX(0);transition:transform 0.4s;transform-origin:left}
 .result-card:hover::after{transform:scaleX(1)}
 .rc-industry{font-size:0.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:600;margin-bottom:12px}
-.rc-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:16px}
+.rc-title{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:16px}
 .rc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .rc-metric{text-align:center;background:rgba(59,130,246,0.05);border-radius:8px;padding:12px}
-.rc-metric-val{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent)}
+.rc-metric-val{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent)}
 .rc-metric-lbl{font-size:0.72rem;color:var(--muted);margin-top:2px}
 
 /* TESTIMONIALS */
@@ -174,7 +174,7 @@ section{padding:100px 0}
 .tcard-stars{color:var(--gold);font-size:0.9rem;margin-bottom:16px;letter-spacing:2px}
 .tcard-text{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:20px;font-style:italic}
 .tcard-author{display:flex;gap:12px;align-items:center}
-.tcard-avatar{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
+.tcard-avatar{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
 .tcard-name{font-weight:600;font-size:0.9rem}
 .tcard-role{font-size:0.78rem;color:var(--muted)}
 
@@ -191,7 +191,7 @@ section{padding:100px 0}
 
 /* CONTACT */
 .contact-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;margin-top:60px}
-.contact-info h3{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:16px}
+.contact-info h3{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:16px}
 .contact-info p{color:var(--muted);font-size:0.92rem;line-height:1.8;margin-bottom:32px}
 .contact-links{display:flex;flex-direction:column;gap:14px}
 .clink{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--text);transition:all 0.2s;padding:14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem}
@@ -201,17 +201,17 @@ section{padding:100px 0}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .fg{margin-bottom:18px}
 .fg label{display:block;font-size:0.82rem;font-weight:500;margin-bottom:8px;color:var(--muted)}
-.fg input,.fg textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.fg input,.fg textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s}
 .fg input:focus,.fg textarea:focus{border-color:var(--accent)}
 .fg textarea{resize:vertical;min-height:100px}
-.btn-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:none;transition:all 0.25s;letter-spacing:0.3px}
+.btn-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;cursor:none;transition:all 0.25s;letter-spacing:0.3px}
 .btn-submit:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,0.4)}
 
 /* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 0 30px}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .footer-brand p{color:var(--muted);font-size:0.88rem;line-height:1.8;margin-top:12px;max-width:280px}
-.footer-col h5{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px}
+.footer-col h5{font-family:'Outfit',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .footer-col ul a{color:var(--muted);text-decoration:none;font-size:0.86rem;transition:color 0.2s}
 .footer-col ul a:hover{color:var(--text)}
@@ -244,7 +244,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 0 3
 /* MOBILE NAV */
 .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(6,9,18,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:30px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none;transition:color 0.2s}
+.mobile-menu a{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none;transition:color 0.2s}
 .mobile-menu a:hover{color:var(--accent)}
 .close-menu{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:none}
 
@@ -543,7 +543,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 0 3
     </div>
     <div class="contact-wrap">
       <div class="reveal-left">
-        <h3 class="contact-info" style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:16px">Let's Talk SEO</h3>
+        <h3 class="contact-info" style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:16px">Let's Talk SEO</h3>
         <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;margin-bottom:28px">Ready to rank higher and get more customers? Reach out via any channel — I'll respond within 24 hours.</p>
         <div class="contact-links">
           <a href="https://linkedin.com/in/vidwansh-saxena-14b489215" target="_blank" class="clink"><span class="clink-icon">💼</span><div><div style="font-weight:600">LinkedIn</div><div style="font-size:0.78rem;color:var(--muted)">linkedin.com/in/vidwansh-saxena-14b489215</div></div></a>
