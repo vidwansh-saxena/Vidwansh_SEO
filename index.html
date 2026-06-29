@@ -729,11 +729,14 @@ document.querySelectorAll('.skill-bars').forEach(el=>skillObs.observe(el));
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0';});if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.maxHeight='200px';}});});
 
 // CONTACT FORM
-document.getElementById('contact-form').addEventListener('submit',function(e){
-  e.preventDefault();
-  const btn=this.querySelector('.btn-submit');
-  btn.textContent='Sending...';btn.disabled=true;
-  setTimeout(()=>{btn.textContent='✅ Sent! I\'ll reply within 24 hours';btn.style.background='#22c55e';this.reset();setTimeout(()=>{btn.textContent='🚀 Claim My Free SEO Audit';btn.style.background='';btn.disabled=false;},4000);},1500);
+document.getElementById('contact-form').addEventListener('submit', function() {
+
+    const btn = this.querySelector('.btn-submit');
+
+    btn.textContent = 'Sending...';
+
+    btn.disabled = true;
+
 });
 
 // MOBILE MENU
